@@ -1,27 +1,78 @@
-# CotacaoHojeFrontend
+<h1 align="center" style="font-weight: bold;">Project Cotação Hoje 💻</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+<p align="center">
+ <a href="#tech">Technologies</a> • 
+ <a href="#started">Getting Started</a> • 
+  <a href="#colab">Collaborators</a> •
+ <a href="#contribute">Contribute</a>
+</p>
 
-## Development server
+<p align="center">
+    <b>O Cotações-Hoje é uma aplicação web que consome dados de uma API externa para exibir cotações de moedas em tempo real e seu histórico.</b>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- 
+<p align="center">
+     <a href="PROJECT__URL">📱 Visit this Project</a>
+</p>
+-->
 
-## Code scaffolding
+<h2 id="layout">🎨 Layout</h2>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center">
+    <img src="../.github/example.png" alt="Image Example" width="400px">
+    <img src="../.github/example.png" alt="Image Example" width="400px">
+</p>
 
-## Build
+<h2 id="technologies">💻 Technologies</h2>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- list of all technologies you used
+- Angular
+- Bootstrap
+- ngx-charts
 
-## Running unit tests
+<h2 id="started">🚀 Getting started</h2>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Aqui está descrito como executar o projeto localmente
 
-## Running end-to-end tests
+<h3>Prerequisites</h3>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Aqui está uma lista de todos os requisitos para rodar o projeto. Veja:
 
-## Further help
+- [Angular](https://angular.dev/)
+- [Git](https://git-scm.com/downloads)
+- [Backend](https://github.com/rafaeldjcarvalho/cotacao_hoje)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<h3>Cloning</h3>
+
+Como clonar o projeto:
+
+```bash
+git clone https://github.com/rafaeldjcarvalho/CotacaoHoje-frontend
+```
+
+<h3>Starting</h3>
+
+Para iniciar o projeto, basta entrar na pasta do projeto e executar o "ngg serve" do Angular.
+
+```bash
+cd CotacaoHoje-frontend
+ng serve
+```
+
+<h2 id="colab">🤝 Collaborators</h2>
+
+Special thank you for all people that contributed for this project.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/141766102?v=4" width="100px;" alt="Rafael Profile Picture"/><br>
+        <sub>
+          <b>Rafael de Jesus Carvalho</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
