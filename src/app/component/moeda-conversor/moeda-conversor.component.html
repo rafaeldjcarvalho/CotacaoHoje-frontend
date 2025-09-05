@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-body">
+    <!-- Escolher moeda e colocar um valor-->
+    <p class="h2">Conversor de Moedas: </p>
+    <form id="conversor-de-moedas" name="conversor-de-moedas">
+      <select [(ngModel)]= "moeda" name="moeda" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+        <option selected disabled>Selecione uma moeda</option>
+        @for (item of listaDeMoeda; track $index) {
+          <option value="{{item}}">{{item}}</option>
+        }
+      </select>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input [(ngModel)]= "valor" name="valor" type="number" class="form-control" aria-label="Amount (to the nearest dollar)" (change)="valorMudou()">
+        <span class="input-group-text">.00</span>
+      </div>
+      <button type="button" class="btn btn-warning" (click)="enviarDados()">Converter</button>
+    </form>
+    <!-- Mostra cotacao e valor convertido-->
+    @if ((moeda != "Selecione uma moeda" && valor != 0) && (resultado != 0 && click == true)) {
+      <br>
+      <app-moeda-table [listaDeCotacoes]="[cotacao]"></app-moeda-table>
+      <br>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Valor convertido: $</span>
+        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Digite um valor" value="{{resultado}}">
+        <span class="input-group-text">.00 {{cotacao.nomeFormatado.split("/")[1]}}</span>
+      </div>
+    } @else {
+      <br>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+          Experimente converter algum valor
+        </div>
+      </div>
+    }
+  </div>
+</div>
