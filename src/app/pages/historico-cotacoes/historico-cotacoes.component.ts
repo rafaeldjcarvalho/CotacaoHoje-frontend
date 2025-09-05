@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { tap } from 'rxjs';
 import { Cotacao } from '../../interfaces/cotacao';
 import { HistoricoTableComponent } from "../../component/historico-table/historico-table.component";
+import { GraficoLinhaComponent } from "../../component/grafico-linha/grafico-linha.component";
 
 @Component({
   selector: 'app-historico-cotacoes',
   standalone: true,
   imports: [
     FormsModule,
-    HistoricoTableComponent
+    HistoricoTableComponent,
+    GraficoLinhaComponent
 ],
   templateUrl: './historico-cotacoes.component.html',
   styleUrl: './historico-cotacoes.component.scss'

@@ -1,5 +1,6 @@
 <div class="card">
   <div class="card-body">
+    <p class="h3 text-center">Histórico de Cotações</p>
     <!-- Selecionar moeda-->
     <form>
       <span>Selecione uma moeda: </span>
@@ -30,6 +31,8 @@
           </div>
           <div class="col">
             <!-- Gráfico de linha-->
+            <br>
+            <app-grafico-linha [historicoDeCotacao]="historicoDaCotacao"></app-grafico-linha>
           </div>
         </div>
       </div>
