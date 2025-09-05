@@ -1,0 +1,16 @@
+<table class="table table-warning table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Data/Hora</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of cotacoes; track $index) {
+      <tr>
+        <td>{{item.dataHoraConsulta | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+        <td>{{item.valor}}</td>
+      </tr>
+    }
+  </tbody>
+</table>

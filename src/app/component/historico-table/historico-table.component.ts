@@ -3,16 +3,16 @@ import { Cotacao } from '../../interfaces/cotacao';
 import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-moeda-table',
+  selector: 'app-historico-table',
   standalone: true,
   imports: [
     DatePipe
   ],
-  templateUrl: './moeda-table.component.html',
-  styleUrl: './moeda-table.component.scss'
+  templateUrl: './historico-table.component.html',
+  styleUrl: './historico-table.component.scss'
 })
-export class MoedaTableComponent {
+export class HistoricoTableComponent {
 
-  @Input() listaDeCotacoes!:Cotacao[];
+  @Input() cotacoes!: Cotacao[];
 
 }
