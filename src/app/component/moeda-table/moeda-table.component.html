@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <p class="h2">Cotação atual: </p>
+    <table class="table table-warning table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Codigo da Moeda</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Data/hora</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of listaDeCotacoes; track $index) {
+          <tr>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.codigoMoeda}}</td>
+            <td>{{item.nomeFormatado}}</td>
+            <td>{{item.valor}}</td>
+            <td>{{item.dataHoraConsulta}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
