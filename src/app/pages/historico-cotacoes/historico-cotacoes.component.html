@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <!-- Selecionar moeda-->
+    <form>
+      <span>Selecione uma moeda: </span>
+      <select [(ngModel)]= "moeda" name="moeda" class="form-select form-select-sm" (change)="atualizarDados()" aria-label=".form-select-lg example">
+        <option selected disabled>Selecione uma moeda</option>
+        @for (item of listaDeMoeda; track $index) {
+          <option value="{{item}}">{{item}}</option>
+        }
+      </select>
+      @if (moeda != undefined) {
+        <span>Selecione a quantidade de dias: </span>
+        <select [(ngModel)]= "dias" name="dias" class="form-select form-select-sm" aria-label=".form-select-sm example" (change)="atualizarDados()">
+          <option selected disabled>selecione a quantidade</option>
+          <option value="5">Últimos 5 dias</option>
+          <option value="10">Últimos 10 dias</option>
+          <option value="15">Últimos 15 dias</option>
+        </select>
+      }
+    </form>
+    @if (moeda != undefined && dias != undefined) {
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- Tabela -->
+            <br>
+            <p class="h5">Valores da moeda nos últimos {{dias}} dias: </p>
+            <app-historico-table [cotacoes]="historicoDaCotacao"></app-historico-table>
+          </div>
+          <div class="col">
+            <!-- Gráfico de linha-->
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
